@@ -1,12 +1,14 @@
 #include <iostream>
 using namespace std;
 
+// Class Abstract
 class Karyawan {
 	public:
 		string nama, nik; 
 		double gajiPokok;
 
-	    virtual void tampilkanInfo() = 0;
+		// Method Abstract
+	    	virtual void tampilkanInfo() = 0;
 };
 
 class KaryawanTetap: public Karyawan {
@@ -16,7 +18,8 @@ class KaryawanTetap: public Karyawan {
 		double hitungGaji() {
 			return gajiPokok + tunjangan;
 		}
-		
+
+		// Override/Menimpa Method tampilkanInfo
 		void tampilkanInfo() override {
 			cout << "Nama: " << nama << endl;
 			cout << "Nik: " << nik << endl;
@@ -34,8 +37,9 @@ class KaryawanHarian: public Karyawan {
 		double hitungGaji() {
         	return jumlahHariKerja * upahPerHari;
     	}
-    	
-    	void tampilkanInfo() override {
+
+		// Override/Menimpa Method tampilkanInfo
+	    	void tampilkanInfo() override {
 			cout << "Nama: " << nama << endl;
 			cout << "Nik: " << nik << endl;
 			cout << "Jumlah Hari Kerja: " << jumlahHariKerja << endl;
