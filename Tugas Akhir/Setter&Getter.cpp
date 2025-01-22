@@ -2,6 +2,7 @@
 using namespace std;
 
 class Buku {
+	// Atribut
 	private:
 		string judul, pengarang, penerbit;
 		int tahunTerbit;
