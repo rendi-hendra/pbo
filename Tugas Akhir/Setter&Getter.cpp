@@ -44,7 +44,6 @@ class Buku {
 				this->tahunTerbit = tahun;
 			} else {
 				cout << "Tahun Harus Positif Tidak Boleh Negative!" << endl;
-				this->tahunTerbit = 0;
 			}
 		}
 		
